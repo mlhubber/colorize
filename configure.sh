@@ -20,6 +20,5 @@ if [ ! -f models/${MODEL_NAME} ]; then
   cp ../.cache/${MODEL_NAME} models/
 fi
 
-
 echo "Installing dependencies:" $DEP
 conda install $DEP
