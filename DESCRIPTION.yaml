@@ -8,6 +8,7 @@ meta:
   license      : gpl3
   title        : Demonstrate the concept of photo colorization.
   author       : Yang Liu
+  url          : https://github.com/mlhubber/colorize
   filename     : pool/main/c/colorize/colorize_1.1.2.mlm
   date         : 2018-11-04 08:45:31
 commands:
