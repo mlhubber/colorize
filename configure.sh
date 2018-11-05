@@ -21,4 +21,15 @@ if [ ! -f models/${MODEL_NAME} ]; then
 fi
 
 echo "Installing dependencies:" $DEP
-conda install $DEP
+
+installed="$(conda list)"
+uninstalled=''
+for pkg in $DEP; do
+  if [ ! -z $(echo "$installed" | grep -E "^$pkg ") ]; then
+    uninstalled="$uninstalled $pkg"
+  fi
+done
+
+if [[ ! -z $uninstalled ]]; then
+  conda install "$uninstalled"
+fi
