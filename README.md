@@ -11,36 +11,40 @@ Bare minimal code to run colorization demo.
 
 ## Usage
 
-* To install and run the pre-built model::
+* To install and run the pre-built model:
 
+  ```console
   $ pip install mlhub
   $ ml install colorize
   $ ml configure colorize
   $ ml demo colorize
+  ```
 
 * To colorize:
 
   - An image from a local file:
 
     ```console
-      $ ml score colorize ~/.mlhub/colorize/images/image_07_bw.png
+    $ ml score colorize ~/.mlhub/colorize/images/image_07_bw.png
     ```
+
+    Then the colorized image will be saved into a file like
+    `image_07_bw_color.png`.
 
   - Images in a folder:
 
     ```console
-      $ ml score colorize ~/.mlhub/colorize/images
+    $ ml score colorize ~/.mlhub/colorize/images
     ```
 
   - An image from the web:
 
     ```console
-      $ ml score colorize https://github.com/foamliu/Simple-Colorization/raw/master/images/sample.png
+    $ ml score colorize https://github.com/foamliu/Simple-Colorization/raw/master/images/sample.png
     ```
 
   - Interatively without repeatedly reloading the model:
 
     ```console
-      $ ml score colorize
+    $ ml score colorize
     ```
-
