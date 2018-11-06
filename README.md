@@ -6,7 +6,8 @@ photos is provided and the *demo* command will colorize and display
 these. You can then colorize your own local photo file, a photo at a
 URL, or a folder of photos using the *score* command.
 
-See the github repository for examples of its usage.
+See the github repository for examples of its usage:
+https://github.com/mlhubber/colorize
 
 ## Usage
 
