@@ -10,8 +10,8 @@ meta:
   author       : Yang Liu
   maintainer   : Simon Zhao
   url          : https://github.com/mlhubber/colorize
-  filename     : pool/main/c/colorize/colorize_1.1.3.mlm
-  date         : 2018-11-05 19:07:09
+  filename     : pool/main/c/colorize/colorize_1.2.0.mlm
+  date         : 2018-11-06 12:35:48
 commands:
   demo   : Demonstrate colorization on sample black-and-white images.
   print  : View a textual representation of the colorization model.

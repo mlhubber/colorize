@@ -9,6 +9,7 @@
 MODEL_FILES = 			\
 	configure.sh		\
 	demo.py			\
+	print.py		\
 	display.py		\
 	score.py		\
 	utils.py		\
