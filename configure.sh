@@ -2,7 +2,7 @@
 
 MODEL_URL="https://github.com/foamliu/Simple-Colorization/releases/download/v1.0/model.06-2.5489.hdf5"
 MODEL_NAME=${MODEL_URL##*/}
-DEP="numpy tensorflow keras opencv pydot"
+DEP="numpy tensorflow keras opencv pydot graphviz"
 
 if [ ! -d models ]; then
   mkdir models

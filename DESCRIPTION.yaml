@@ -14,4 +14,5 @@ meta:
 commands:
   demo   : Demonstrate colorization on sample black-and-white images.
   print  : View a textual representation of the colorization model.
+  display: Visualise the model graph.
   score  : Colorize images given by a path or URL.

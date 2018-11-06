@@ -17,14 +17,14 @@ args = parser.parse_args()
 # Load required modules
 
 print("Loading the required Python modules ...")
-import keras
+from keras.models import load_model
 
 
 # Load model
 
 print("\nLoading the model ...")
 model_path = 'models/model.06-2.5489.hdf5'
-model = keras.models.load_model(model_path)
+model = load_model(model_path)
 
 
 # Print model summary
