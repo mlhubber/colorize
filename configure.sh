@@ -2,7 +2,7 @@
 
 MODEL_URL="https://github.com/foamliu/Simple-Colorization/releases/download/v1.0/model.06-2.5489.hdf5"
 MODEL_NAME=${MODEL_URL##*/}
-DEP="numpy tensorflow keras opencv"
+DEP="numpy tensorflow keras opencv pydot"
 
 if [ ! -d models ]; then
   mkdir models
@@ -25,8 +25,8 @@ echo "Installing dependencies:" $DEP
 installed="$(conda list)"
 uninstalled=''
 for pkg in $DEP; do
-  if [ ! -z $(echo "$installed" | grep -E "^$pkg ") ]; then
-    uninstalled="$uninstalled $pkg"
+  if [[ -z $(echo "$installed" | grep -E "^$pkg ") ]]; then
+    uninstalled="$pkg $uninstalled"
   fi
 done
 
