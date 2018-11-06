@@ -1,13 +1,12 @@
 # Simple Colorization
 
-Bare minimal code to run colorization demo.
+This pre-built model provides a very simple example of a pre-built
+model for colorization of photos. A collection of black and white
+photos is provided and the *demo* command will colorize and display
+these. You can then colorize your own local photo file, a photo at a
+URL, or a folder of photos using the *score* command.
 
-## Dependencies
-
-- [NumPy](http://docs.scipy.org/doc/numpy-1.10.1/user/install.html)
-- [Tensorflow](https://www.tensorflow.org/versions/r0.8/get_started/os_setup.html)
-- [Keras](https://keras.io/#installation)
-- [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/)
+See the github repository for examples of its usage.
 
 ## Usage
 
@@ -19,6 +18,15 @@ Bare minimal code to run colorization demo.
   $ ml configure colorize
   $ ml demo colorize
   ```
+
+## Dependencies
+
+- [NumPy](http://docs.scipy.org/doc/numpy-1.10.1/user/install.html)
+- [Tensorflow](https://www.tensorflow.org/versions/r0.8/get_started/os_setup.html)
+- [Keras](https://keras.io/#installation)
+- [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/)
+
+## Examples
 
 * To colorize:
 
