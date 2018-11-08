@@ -1,10 +1,10 @@
 # Simple Colorization
 
-This pre-built model provides a very simple example of a pre-built
-model for colorization of photos. A collection of black and white
-photos is provided and the *demo* command will colorize and display
-these. You can then colorize your own local photo file, a photo at a
-URL, or a folder of photos using the *score* command.
+This pre-built model from Yang Liu provides a very simple example of a
+photo colorization using deep learning. A collection of black and
+white photos is provided and the *demo* command will colorize and
+display these. You can then colorize your own local photo file, a
+photo at a URL, or a folder of photos using the *score* command.
 
 See the github repository for examples of its usage:
 https://github.com/mlhubber/colorize
