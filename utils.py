@@ -3,7 +3,6 @@ import keras.backend as K
 import numpy as np
 from keras.models import load_model
 import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
 import matplotlib.gridspec as gridspec
 
 

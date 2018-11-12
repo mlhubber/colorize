@@ -4,32 +4,32 @@ MODEL_URL="https://github.com/foamliu/Simple-Colorization/releases/download/v1.0
 MODEL_NAME=${MODEL_URL##*/}
 DEP="numpy tensorflow keras opencv pydot graphviz"
 
-if [ ! -d models ]; then
+if [[ ! -d models ]]; then
   mkdir models
 fi
 
-if [ ! -f models/${MODEL_NAME} ]; then
-  if [ ! -d ../.cache ]; then
+if [[ ! -f models/${MODEL_NAME} ]]; then
+  if [[ ! -d ../.cache ]]; then
     mkdir ../.cache
   fi
-  if [ ! -f ../.cache/${MODEL_NAME} ]; then
+  if [[ ! -f ../.cache/${MODEL_NAME} ]]; then
     echo "Downloading the pre-built model itself (95M) which can take a minute or two..."
-    wget --directory-prefix=../.cache $MODEL_URL
+    wget --directory-prefix=../.cache ${MODEL_URL}
     echo ""
   fi
   cp ../.cache/${MODEL_NAME} models/
 fi
 
-echo "Installing dependencies:" $DEP
+echo "Installing dependencies:" ${DEP}
 
 installed="$(conda list)"
 uninstalled=''
-for pkg in $DEP; do
+for pkg in ${DEP}; do
   if [[ -z $(echo "$installed" | grep -E "^$pkg ") ]]; then
     uninstalled="$pkg $uninstalled"
   fi
 done
 
-if [[ ! -z $uninstalled ]]; then
+if [[ ! -z ${uninstalled} ]]; then
   conda install "$uninstalled"
 fi

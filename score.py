@@ -13,6 +13,7 @@ import numpy as np
 from utils import predict, plot_bw_color_comparison
 from mlhub import utils as mlutils
 
+
 def _tab_complete_path(text, state):
     if '~' in text:
         text = os.path.expanduser('~')
@@ -129,4 +130,3 @@ if len(sys.argv) < 2:
 else:
     for url in sys.argv[1:]:
         _colorize(url)
-

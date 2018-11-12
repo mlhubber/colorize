@@ -29,7 +29,7 @@ model = load_model(model_path)
 
 # Print model summary
 
-class PrintFn():
+class PrintFn:
 
     def __init__(self, verbose=False, nlayer_display=NLAYER_DISPLAY):
         self.nlayer = 0             # Number of layers
@@ -42,11 +42,9 @@ class PrintFn():
         self.summary = []           # All lines from Keras model.summary()
         self.layer_index = []       # Indexes of all layers
 
-
     def __mark_layer(self):
         self.nlayer += 1
         self.layer_index.append(len(self.summary)-1)
-
 
     def __call__(self, line):
         self.summary.append(line)
@@ -75,9 +73,9 @@ class PrintFn():
                 head = self.layer_index[self.nlayer_display] + 1
                 tail = self.layer_index[self.nlayer - self.nlayer_display]
 
-                print("\n".join(self.summary[ : head]))
+                print("\n".join(self.summary[:head]))
                 print("\n    ...\n" * 2)
-                print("\n".join(self.summary[tail : ]))
+                print("\n".join(self.summary[tail:]))
 
 
 model.summary(print_fn=PrintFn(verbose=args.verbose, nlayer_display=args.nlayer_display))
