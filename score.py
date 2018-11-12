@@ -11,7 +11,7 @@ import urllib
 import numpy as np
 
 from utils import predict, plot_bw_color_comparison
-
+from mlhub import utils as mlutils
 
 def _tab_complete_path(text, state):
     if '~' in text:
@@ -98,7 +98,8 @@ def _colorize(url):
 
 
 # The working dir of the command which invokes this script.
-CMD_CWD = os.environ.get('CMD_CWD', '')
+
+CMD_CWD = mlutils.get_cmd_cwd()
 
 
 # Setup input path completion
