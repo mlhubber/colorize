@@ -5,17 +5,18 @@ import os
 import cv2 as cv
 import glob
 
-from utils import predict, plot_bw_color_comparison
+from utils import predict, plot_bw_color_comparison, IMG_PATH
 
-imgpath = "images"
+
 cwd = os.getcwd()
 print("Demonstrate colorization using images found in\n",
-      os.path.join(cwd, imgpath), "\n")
+      os.path.join(cwd, IMG_PATH), "\n")
+
 
 if __name__ == '__main__':
     image_folder = 'images'
 
-    images = glob.glob(os.path.join(imgpath, "*_bw.png"))
+    images = glob.glob(os.path.join(IMG_PATH, "*_bw.png"))
     images.sort()
 
     for image in images:

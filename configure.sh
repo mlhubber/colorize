@@ -1,34 +1,59 @@
 #!/bin/sh
 
-MODEL_URL="https://github.com/foamliu/Simple-Colorization/releases/download/v1.0/model.06-2.5489.hdf5"
-MODEL_NAME=${MODEL_URL##*/}
-DEP="numpy tensorflow keras opencv pydot graphviz"
+model_url="https://github.com/foamliu/Simple-Colorization/releases/download/v1.0/model.06-2.5489.hdf5"
+model_name=${model_url##*/}
+dependencies="numpy tensorflow keras opencv pydot graphviz"
 
-if [[ ! -d models ]]; then
-  mkdir models
+######################################################################
+# Setup
+
+# Call mlhub.utils.create_package_cache_dir to get the package-specific cache dir.
+# Then link it into ./cache
+
+cache_dir="$(python -c "from mlhub import utils; print(utils.create_package_cache_dir())")"
+ln -s ${cache_dir} cache
+cache_dir="cache"
+
+# Change dir to ./cache to make following work inside ./cache
+
+cd ${cache_dir}
+
+######################################################################
+# Download pre-built model.
+#
+# **Note**: images are packaged instead of downloaded.
+
+dr="models"
+if [[ ! -d ${dr} ]]; then
+  mkdir ${dr}
 fi
 
-if [[ ! -f models/${MODEL_NAME} ]]; then
-  if [[ ! -d ../.cache ]]; then
-    mkdir ../.cache
-  fi
-  if [[ ! -f ../.cache/${MODEL_NAME} ]]; then
-    echo "Downloading the pre-built model itself (95M) which can take a minute or two..."
-    wget --directory-prefix=../.cache ${MODEL_URL}
-    echo ""
-  fi
-  cp ../.cache/${MODEL_NAME} models/
+pushd ${dr} 1>/dev/null
+
+if [[ ! -f ${dr}/${model_name} ]]; then
+  echo "Downloading the pre-built model itself (95M) which can take a minute or two..."
+  wget ${model_url}
+  echo ""
 fi
 
-echo "Installing dependencies:" ${DEP}
+popd 1>/dev/null
+
+######################################################################
+# Install dependencies
+
+echo "Installing dependencies:" ${dependencies}
+
+# Check uninstalled dependencies
 
 installed="$(conda list)"
 uninstalled=''
-for pkg in ${DEP}; do
-  if [[ -z $(echo "$installed" | grep -E "^$pkg ") ]]; then
-    uninstalled="$pkg $uninstalled"
+for pkg in ${dependencies}; do
+  if [[ -z $(echo "${installed}" | grep -E "^${pkg} ") ]]; then
+    uninstalled="${pkg} ${uninstalled}"
   fi
 done
+
+# Install uninstalled dependencies
 
 if [[ ! -z ${uninstalled} ]]; then
   conda install "$uninstalled"
