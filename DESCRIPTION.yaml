@@ -11,7 +11,6 @@ meta:
   maintainer   : Simon Zhao
   url          : https://github.com/mlhubber/colorize
   filename     : pool/main/c/colorize/colorize_1.2.0.mlm
-  date         : 2018-11-06 15:00:29
 commands:
   demo   : Demonstrate colorization on sample black-and-white images.
   print  : View a textual representation of the colorization model.
