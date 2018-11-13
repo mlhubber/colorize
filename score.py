@@ -60,7 +60,15 @@ def _colorize_one_img(url):
         url (str): a url to an image, or a path to an image.
     """
 
-    gray = _read_cv_image_from(url)
+    try:
+        gray = _read_cv_image_from(url)
+    except urllib.error.HTTPError:
+        print("URL invalid:\n  {}".format(url))
+        return
+    except FileNotFoundError:
+        print("File not Found:\n  {}".format(url))
+        return
+
     print("Colorize " + url)
     color = predict(gray)
     gray_name = os.path.basename(url).split('.')
