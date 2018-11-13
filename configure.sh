@@ -62,5 +62,5 @@ done
 # Install uninstalled dependencies
 
 if [[ ! -z ${uninstalled} ]]; then
-  conda install "$uninstalled"
+  conda install $uninstalled
 fi
