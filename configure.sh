@@ -32,7 +32,13 @@ pushd ${dr} 1>/dev/null
 
 if [[ ! -f ${model_name} ]]; then
   echo "Downloading the pre-built model itself (95M) which can take a minute or two..."
-  wget ${model_url}
+
+  # --quiet makes wget won't show all verbose detail about downloading
+  # --show-progress makes wget only show the progress of downloading
+  # 2>&1 makes all the messages from wget show up, since those messages are directed to stderr,
+  #      which won't be shown if this script is invoked by subprocess.Popen(..., stderr=PIPE)
+
+  wget  --quiet --show-progress ${model_url} 2>&1
   echo ""
 fi
 
