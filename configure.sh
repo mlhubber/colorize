@@ -30,7 +30,7 @@ fi
 
 pushd ${dr} 1>/dev/null
 
-if [[ ! -f ${dr}/${model_name} ]]; then
+if [[ ! -f ${model_name} ]]; then
   echo "Downloading the pre-built model itself (95M) which can take a minute or two..."
   wget ${model_url}
   echo ""
