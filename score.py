@@ -9,6 +9,7 @@ import re
 import toolz
 import urllib
 import numpy as np
+import socket
 
 from utils import predict, plot_bw_color_comparison
 from mlhub import utils as mlutils
@@ -62,11 +63,8 @@ def _colorize_one_img(url):
 
     try:
         gray = _read_cv_image_from(url)
-    except urllib.error.HTTPError:
-        print("URL invalid:\n  {}".format(url))
-        return
-    except FileNotFoundError:
-        print("File not Found:\n  {}".format(url))
+    except (urllib.error.URLError, socket.gaierror, FileNotFoundError, OSError):
+        print("URL or file invalid:\n  {}".format(url))
         return
 
     print("Colorize " + url)
