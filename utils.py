@@ -1,65 +1,69 @@
 import cv2 as cv
-import keras.backend as K
 import numpy as np
 from keras.models import load_model
 import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
+from mlhub.utils import DataResourceNotFoundException
 
 MODEL_FILE = 'cache/models/model.06-2.5489.hdf5'
 IMG_PATH = 'images'
 
 
-def predict(gray):
-    h_in, w_in = 256, 256
-    h_out, w_out = h_in // 4, w_in // 4
-    epsilon = 1e-6
-    T = 0.38
+def get_predict_api():
 
-    img_rows, img_cols = gray.shape[:2]
+    try:
+        model = load_model(MODEL_FILE)
+    except OSError:
+        raise DataResourceNotFoundException(MODEL_FILE)
 
-    model_path = MODEL_FILE
-    model = load_model(model_path)
+    def predict(gray):
+        h_in, w_in = 256, 256
+        h_out, w_out = h_in // 4, w_in // 4
+        epsilon = 1e-6
+        T = 0.38
 
-    q_ab = np.load("data/pts_in_hull.npy")
-    nb_q = q_ab.shape[0]
+        img_rows, img_cols = gray.shape[:2]
 
-    L = gray
-    gray = cv.resize(gray, (h_in, w_in), cv.INTER_CUBIC)
+        q_ab = np.load("data/pts_in_hull.npy")
+        nb_q = q_ab.shape[0]
 
-    x_test = np.empty((1, h_in, w_in, 1), dtype=np.float32)
-    x_test[0, :, :, 0] = gray / 255.
+        L = gray
+        gray = cv.resize(gray, (h_in, w_in), cv.INTER_CUBIC)
 
-    X_colorized = model.predict(x_test)
-    X_colorized = X_colorized.reshape((h_out * w_out, nb_q))
+        x_test = np.empty((1, h_in, w_in, 1), dtype=np.float32)
+        x_test[0, :, :, 0] = gray / 255.
 
-    X_colorized = np.exp(np.log(X_colorized + epsilon) / T)
-    X_colorized = X_colorized / np.sum(X_colorized, 1)[:, np.newaxis]
+        X_colorized = model.predict(x_test)
+        X_colorized = X_colorized.reshape((h_out * w_out, nb_q))
 
-    q_a = q_ab[:, 0].reshape((1, 313))
-    q_b = q_ab[:, 1].reshape((1, 313))
+        X_colorized = np.exp(np.log(X_colorized + epsilon) / T)
+        X_colorized = X_colorized / np.sum(X_colorized, 1)[:, np.newaxis]
 
-    X_a = np.sum(X_colorized * q_a, 1).reshape((h_out, w_out))
-    X_b = np.sum(X_colorized * q_b, 1).reshape((h_out, w_out))
+        q_a = q_ab[:, 0].reshape((1, 313))
+        q_b = q_ab[:, 1].reshape((1, 313))
 
-    X_a = cv.resize(X_a, (img_cols, img_rows), cv.INTER_CUBIC)
-    X_b = cv.resize(X_b, (img_cols, img_rows), cv.INTER_CUBIC)
+        X_a = np.sum(X_colorized * q_a, 1).reshape((h_out, w_out))
+        X_b = np.sum(X_colorized * q_b, 1).reshape((h_out, w_out))
 
-    X_a = X_a + 128
-    X_b = X_b + 128
+        X_a = cv.resize(X_a, (img_cols, img_rows), cv.INTER_CUBIC)
+        X_b = cv.resize(X_b, (img_cols, img_rows), cv.INTER_CUBIC)
 
-    out_lab = np.zeros((img_rows, img_cols, 3), dtype=np.int32)
-    out_lab[:, :, 0] = L
-    out_lab[:, :, 1] = X_a
-    out_lab[:, :, 2] = X_b
+        X_a = X_a + 128
+        X_b = X_b + 128
 
-    out_lab = out_lab.astype(np.uint8)
-    out_bgr = cv.cvtColor(out_lab, cv.COLOR_LAB2BGR)
+        out_lab = np.zeros((img_rows, img_cols, 3), dtype=np.int32)
+        out_lab[:, :, 0] = L
+        out_lab[:, :, 1] = X_a
+        out_lab[:, :, 2] = X_b
 
-    out_bgr = out_bgr.astype(np.uint8)
+        out_lab = out_lab.astype(np.uint8)
+        out_bgr = cv.cvtColor(out_lab, cv.COLOR_LAB2BGR)
 
-    K.clear_session()
+        out_bgr = out_bgr.astype(np.uint8)
 
-    return out_bgr
+        return out_bgr
+
+    return predict, model
 
 
 def _plot_image(ax, img, cmap=None, label=''):

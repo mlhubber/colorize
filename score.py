@@ -1,4 +1,5 @@
 # Import the necessary packages.
+print("Loading the required Python modules ...\n")
 
 import os
 import cv2 as cv
@@ -11,9 +12,11 @@ import urllib
 import numpy as np
 import socket
 
-from utils import predict, plot_bw_color_comparison
+from utils import get_predict_api, plot_bw_color_comparison
 from mlhub import utils as mlutils
 
+print("Loading the model ...")
+predict = get_predict_api()
 
 def _tab_complete_path(text, state):
     if '~' in text:

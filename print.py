@@ -17,13 +17,12 @@ args = parser.parse_args()
 # Load required modules
 
 print("Loading the required Python modules ...")
-from keras.models import load_model
-from utils import MODEL_FILE
+from utils import get_predict_api
 
 # Load model
 
 print("\nLoading the model ...")
-model = load_model(MODEL_FILE)
+_, model = get_predict_api()
 
 
 # Print model summary

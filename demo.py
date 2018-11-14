@@ -1,12 +1,16 @@
 # Import required libraries.
-print("Loading the required Python modules.\n")
+print("Loading the required Python modules ...\n")
 
 import os
 import cv2 as cv
 import glob
 
-from utils import predict, plot_bw_color_comparison, IMG_PATH
+from utils import get_predict_api, plot_bw_color_comparison, IMG_PATH
 
+# Load model
+
+print("Loading the model ...")
+predict = get_predict_api()
 
 cwd = os.getcwd()
 print("Demonstrate colorization using images found in\n",
