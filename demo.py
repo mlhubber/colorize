@@ -12,6 +12,7 @@ cwd = os.getcwd()
 print("Demonstrate colorization using images found in\n",
       os.path.join(cwd, IMG_PATH), "\n")
 
+print("Please close each image (Ctrl-w) to proceed through the demonstration.\n")
 
 if __name__ == '__main__':
     image_folder = 'images'
