@@ -10,7 +10,7 @@ from utils import get_predict_api, plot_bw_color_comparison, IMG_PATH
 # Load model
 
 print("Loading the model ...")
-predict = get_predict_api()
+predict, _ = get_predict_api()
 
 cwd = os.getcwd()
 print("Demonstrate colorization using images found in\n",
