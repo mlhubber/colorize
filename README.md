@@ -49,7 +49,7 @@ https://github.com/mlhubber/colorize
   - An image from the web:
 
     ```console
-    $ ml score colorize https://github.com/foamliu/Simple-Colorization/raw/master/images/sample.png
+    $ ml score colorize https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper2.jpg
     ```
 
   - Interatively without repeatedly reloading the model:
