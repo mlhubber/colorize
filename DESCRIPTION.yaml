@@ -1,7 +1,7 @@
 --- # SIMPLE COLOURIZER
 meta:
   name         : colorize
-  version      : 1.2.1
+  version      : 1.2.2
   keywords     : python, graphics, colorize
   languages    : py
   dependencies : numpy, tensorflow, keras, opencv
@@ -10,7 +10,7 @@ meta:
   author       : Yang Liu
   maintainer   : Simon Zhao
   url          : https://github.com/mlhubber/colorize
-  filename     : pool/main/c/colorize/colorize_1.2.1.mlm
+  filename     : pool/main/c/colorize/colorize_1.2.2.mlm
 commands:
   demo   : Demonstrate colorization on sample black-and-white images.
   print  : View a textual representation of the colorization model.
