@@ -14,10 +14,10 @@ https://github.com/mlhubber/colorize
 * To install and run the pre-built model:
 
   ```console
-  $ pip install mlhub
-  $ ml install colorize
+  $ pip3 install mlhub
+  $ ml install   colorize
   $ ml configure colorize
-  $ ml demo colorize
+  $ ml demo      colorize
   ```
 
 ## Dependencies
