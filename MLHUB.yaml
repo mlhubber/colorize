@@ -11,6 +11,10 @@ meta:
   maintainer   : Simon Zhao
   url          : https://github.com/mlhubber/colorize
   filename     : pool/main/c/colorize/colorize_1.2.2.mlm
+dependencies:
+  conda: numpy, tensorflow, keras, opencv, pydot, graphviz, matplotlib
+  files:
+    - https://github.com/foamliu/Simple-Colorization/releases/download/v1.0/model.06-2.5489.hdf5: cache/models/
 commands:
   demo   : Demonstrate colorization on sample black-and-white images.
   print  : View a textual representation of the colorization model.
