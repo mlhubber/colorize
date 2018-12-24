@@ -4,7 +4,6 @@ meta:
   version      : 1.2.2
   keywords     : python, graphics, colorize
   languages    : py
-  dependencies : numpy, tensorflow, keras, opencv
   license      : gpl3
   title        : Demonstrate the concept of photo colorization.
   author       : Yang Liu
