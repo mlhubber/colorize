@@ -50,10 +50,20 @@ https://github.com/mlhubber/colorize
 
     ```console
     $ ml score colorize https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper2.jpg
+    $ ml score colorize https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flower-wallpaper1-310x165.jpg
     ```
 
   - Interatively without repeatedly reloading the model:
 
     ```console
     $ ml score colorize
+	Loading the required Python modules ...
+
+    Loading the model ...
+
+    Path or URL of images to colorize (Quit by Ctrl-d):
+    (You could try images in '~/.mlhub/colorize/images/')
+    > https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper2.jpg
+	> https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper5-1.jpg
+	> https://www.designsmag.com/wp-content/uploads/2017/06/Black-White-Photography-DesignsMag-011.jpg
     ```
