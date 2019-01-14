@@ -11,7 +11,8 @@ meta:
   url          : https://github.com/mlhubber/colorize
   filename     : pool/main/c/colorize/colorize_1.2.2.mlm
 dependencies:
-  conda: numpy, tensorflow, keras, opencv, pydot, graphviz, matplotlib
+  python3: numpy, keras, opencv, pydot, graphviz, matplotlib
+  pip3: tensorflow
   files:
     - https://github.com/foamliu/Simple-Colorization/releases/download/v1.0/model.06-2.5489.hdf5: cache/models/
     - data
