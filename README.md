@@ -16,6 +16,7 @@ https://github.com/mlhubber/colorize
   ```console
   $ pip3 install mlhub
   $ ml install   colorize
+  $ ml readme    colorize
   $ ml configure colorize
   $ ml demo      colorize
   ```
