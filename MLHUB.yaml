@@ -1,7 +1,7 @@
 --- # SIMPLE COLOURIZER
 meta:
   name         : colorize
-  version      : 1.2.6
+  version      : 1.3.0
   keywords     : python, graphics, colorize
   languages    : py
   license      : gpl3
@@ -29,13 +29,13 @@ dependencies:
     - images
     - print.py
     - README.md
-    - score.py
+    - run.py
     - utils.py
 commands:
   demo   : Demonstrate colorization on sample black-and-white images.
   print  : View a textual representation of the colorization model.
   display: Visualise the model graph.
-  score  :
+  run  :
     description: Colorize images given by a path or URL.
     required:
       image: Path or URL to images.
