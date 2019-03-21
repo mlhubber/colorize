@@ -4,7 +4,7 @@ This pre-built model from Yang Liu provides a very simple example of
 photo colorization using deep neural networks. For the demonstration a
 sample of provided black and white photos are colorized and
 displayed. You can colorize your own local photo, a photo's URL, or a
-folder of photos using the *run* command.
+folder of photos using the *apply* command.
 
 See the github repository for examples of its usage:
 https://github.com/mlhubber/colorize
