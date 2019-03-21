@@ -4,7 +4,7 @@ This pre-built model from Yang Liu provides a very simple example of
 photo colorization using deep neural networks. For the demonstration a
 sample of provided black and white photos are colorized and
 displayed. You can colorize your own local photo, a photo's URL, or a
-folder of photos using the *score* command.
+folder of photos using the *run* command.
 
 See the github repository for examples of its usage:
 https://github.com/mlhubber/colorize
@@ -34,7 +34,7 @@ https://github.com/mlhubber/colorize
   - An image from a local file:
 
     ```console
-    $ ml score colorize ~/.mlhub/colorize/images/image_07_bw.png
+    $ ml run colorize ~/.mlhub/colorize/images/image_07_bw.png
     ```
 
     Then the colorized image will be saved into a file like
@@ -43,20 +43,20 @@ https://github.com/mlhubber/colorize
   - Images in a folder:
 
     ```console
-    $ ml score colorize ~/.mlhub/colorize/images
+    $ ml run colorize ~/.mlhub/colorize/images
     ```
 
   - An image from the web:
 
     ```console
-    $ ml score colorize https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper2.jpg
-    $ ml score colorize https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flower-wallpaper1-310x165.jpg
+    $ ml run colorize https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper2.jpg
+    $ ml run colorize https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flower-wallpaper1-310x165.jpg
     ```
 
   - Interatively without repeatedly reloading the model:
 
     ```console
-    $ ml score colorize
+    $ ml run colorize
 	Loading the required Python modules ...
 
     Loading the model ...
