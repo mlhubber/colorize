@@ -1,7 +1,7 @@
 --- # SIMPLE COLOURIZER
 meta:
   name         : colorize
-  version      : 1.4.4
+  version      : 1.4.5
   keywords     : python, graphics, colorize
   languages    : py
   license      : gpl3
