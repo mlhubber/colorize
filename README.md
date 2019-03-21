@@ -35,7 +35,7 @@ https://github.com/mlhubber/colorize
   - An image from a local file:
 
     ```console
-    $ ml run colorize ~/.mlhub/colorize/images/image_07_bw.png
+    $ ml apply colorize ~/.mlhub/colorize/images/image_07_bw.png
     ```
 
     Then the colorized image will be saved into a file like
@@ -44,20 +44,20 @@ https://github.com/mlhubber/colorize
   - Images in a folder:
 
     ```console
-    $ ml run colorize ~/.mlhub/colorize/images
+    $ ml apply colorize ~/.mlhub/colorize/images
     ```
 
   - An image from the web:
 
     ```console
-    $ ml run colorize https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper2.jpg
-    $ ml run colorize https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flower-wallpaper1-310x165.jpg
+    $ ml apply colorize https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper2.jpg
+    $ ml apply colorize https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flower-wallpaper1-310x165.jpg
     ```
 
   - Interatively without repeatedly reloading the model:
 
     ```console
-    $ ml run colorize
+    $ ml apply colorize
 	Loading the required Python modules ...
 
     Loading the model ...
