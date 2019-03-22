@@ -11,10 +11,15 @@ https://github.com/mlhubber/colorize
 
 ## Usage
 
-* To install and run the pre-built model:
+* To install the mlhub package:
 
   ```console
   $ pip3 install mlhub
+  ```
+
+* To install and run the pre-built model:
+
+  ```console
   $ ml install   colorize
   $ ml readme    colorize
   $ ml configure colorize
@@ -22,6 +27,8 @@ https://github.com/mlhubber/colorize
   ```
 
 ## Dependencies
+
+These are installed by the configure command as above.
 
 - [NumPy](http://docs.scipy.org/doc/numpy-1.10.1/user/install.html)
 - [Tensorflow](https://www.tensorflow.org/versions/r0.8/get_started/os_setup.html)
