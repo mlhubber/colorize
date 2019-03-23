@@ -15,8 +15,8 @@ dependencies:
     - numpy # pip install tensorflow overrides this unfortunately
     - pydot
     - matplotlib
-    - keras # python3-keras not available Ubuntu 16.04
-    - opencv-python # python3-opencv not available Ubuntu 16.04
+    - keras    # python3-keras not available Ubuntu 16.04
+    - opencv   # python3-opencv not available Ubuntu 16.04
     - graphviz # python3-graphviz not available Ubuntu 16.04
   pip3:
     - tensorflow
