@@ -82,9 +82,7 @@ To colorize images given by a path or URL:
 
 ## Commands
 
-* To colorize:
-
-  - An image from a local file:
+- To colorize an image from a local file:
 
     ```console
     $ ml apply colorize ~/.mlhub/colorize/images/image_07_bw.png
@@ -93,20 +91,20 @@ To colorize images given by a path or URL:
     Then the colorized image will be saved into a file like
     `image_07_bw_color.png`.
 
-  - Images in a folder:
+- To colorize images in a folder:
 
     ```console
     $ ml apply colorize ~/.mlhub/colorize/images
     ```
 
-  - An image from the web:
+- To colorize an image from the web:
 
     ```console
     $ ml apply colorize https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper2.jpg
     $ ml apply colorize https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flower-wallpaper1-310x165.jpg
     ```
 
-  - Interatively without repeatedly reloading the model:
+- To interatively colorize without repeatedly reloading the model:
 
     ```console
     $ ml apply colorize
