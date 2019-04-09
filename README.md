@@ -35,6 +35,62 @@ These are installed by the configure command as above.
 - [Keras](https://keras.io/#installation)
 - [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/)
 
+Demonstration
+-------------
+
+```console
+$ ml demo colorize
+Loading the required Python modules ...
+
+Loading the model ...
+Demonstrate colorization using images found in
+ /home/gjw/.mlhub/colorize/images 
+
+Please close each image (Ctrl-w) to proceed through the demonstration.
+
+Colorize image_01_bw.png
+```
+![](image_01.png)
+```console
+Colorize image_02_bw.png
+```
+![](image_02.png)
+```console
+Colorize image_03_bw.png
+```
+![](image_03.png)
+```console
+Colorize image_04_bw.png
+```
+![](image_04.png)
+```console
+Colorize image_05_bw.png
+```
+![](image_05.png)
+```console
+Colorize image_06_bw.png
+```
+![](image_06.png)
+```console
+Colorize image_07_bw.png
+```
+![](image_07.png)
+```console
+Colorize image_09_bw.png
+```
+![](image_09.png)
+```console
+Colorize image_10_bw.png
+```
+![](image_10.png)
+```console
+
+To colorize images given by a path or URL:
+
+  $ ml apply colorize
+
+```
+
 ## Examples
 
 * To colorize:
@@ -75,3 +131,4 @@ These are installed by the configure command as above.
 	> https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper5-1.jpg
 	> https://www.designsmag.com/wp-content/uploads/2017/06/Black-White-Photography-DesignsMag-011.jpg
     ```
+
