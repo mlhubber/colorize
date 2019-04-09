@@ -11,29 +11,18 @@ https://github.com/mlhubber/colorize
 
 ## Usage
 
-* To install the mlhub package:
+* To install mlhub:
 
   ```console
   $ pip3 install mlhub
   ```
 
-* To install and run the pre-built model:
+* To install and configure the pre-built model:
 
   ```console
   $ ml install   colorize
-  $ ml readme    colorize
   $ ml configure colorize
-  $ ml demo      colorize
   ```
-
-## Dependencies
-
-These are installed by the configure command as above.
-
-- [NumPy](http://docs.scipy.org/doc/numpy-1.10.1/user/install.html)
-- [Tensorflow](https://www.tensorflow.org/versions/r0.8/get_started/os_setup.html)
-- [Keras](https://keras.io/#installation)
-- [OpenCV](https://opencv-python-tutroals.readthedocs.io/en/latest/)
 
 Demonstration
 -------------
@@ -91,7 +80,7 @@ To colorize images given by a path or URL:
 
 ```
 
-## Examples
+## Commands
 
 * To colorize:
 
