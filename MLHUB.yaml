@@ -27,7 +27,7 @@ dependencies:
     - demo.py
     - images
     - README.md
-    - apply.py
+    - color.py
     - utils.py
 commands:
   demo   : Demonstrate colorization on sample black-and-white images.
