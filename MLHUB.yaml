@@ -31,4 +31,4 @@ dependencies:
     - utils.py
 commands:
   demo   : Demonstrate colorization on sample black-and-white images.
-  color  :Colorize images given by a path or URL.
+  color  : Colorize images given by a path or URL.
