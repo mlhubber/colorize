@@ -34,7 +34,7 @@ tools.
 *Colorize Photos*
 
 The *color* command will colorize a photo and optionally
-(--interactive) display the original and the colorized versions.
+(*--interactive*) display the original and the colorized versions.
 
 The command is useful in the context of colourising multiple photos,
 perhaps thousands of them by invoking the command with a single file
@@ -50,13 +50,14 @@ $ ml color colorize --interactive image_07_bw.png
 image_07_bw.png,image_07_bw_color.png
 ```
 ![](image_07.png)
+
 The colorized photo will be saved into the file 
 `image_07_bw_color.png`, within the local folder, noting the addition of
 the `_color` suffix. 
 
-The text output from the command names the original photo file and the
-generated photo file. This can be piped into other commands for
-further processing. Thus, you can use your own tool to view the
+The text output from the command is the name ofthe original photo file
+and the generated photo file. This can be piped into other commands
+for further processing. Thus, you can use your own tool to view the
 photo's if you wish:
 
 ```console
@@ -85,7 +86,9 @@ To colorize an image from the web:
 
 ```console
 $ ml color colorize https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper2.jpg
+https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper2.jpg,black-and-white-flowers-wallpaper2_color.jpg
 $ ml color colorize https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flower-wallpaper1-310x165.jpg
+https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flower-wallpaper1-310x165.jpg,black-and-white-flower-wallpaper1-310x165_color.jpg
 ```
 
 To interatively colorize without repeatedly reloading the model:
