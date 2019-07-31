@@ -47,7 +47,7 @@ option_parser = argparse.ArgumentParser(add_help=False)
 
 option_parser.add_argument(
     'path',
-    nargs = "?",
+    nargs = "*",
     help='file(s), folder, or url to image')
 
 option_parser.add_argument(
