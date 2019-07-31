@@ -168,7 +168,7 @@ readline.set_completer(_tab_complete_path)
 
 # Scoring
 
-if args.path == None:
+if len(args.path) == 0:
     try:
         url = input("Path or URL of images to colorize (Quit by Ctrl-d):\n(You could try images in '~/.mlhub/colorize/images/')\n> ")
     except EOFError:
