@@ -93,14 +93,17 @@ https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flower-w
 
 To interatively colorize without repeatedly reloading the model:
 
-    ```console
-    $ ml color colorize --interactive
-    Path or URL of images to colorize (Quit by Ctrl-d):
-    (You could try images in '~/.mlhub/colorize/images/')
-    > https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper2.jpg
-	> https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper5-1.jpg
-	> https://www.designsmag.com/wp-content/uploads/2017/06/Black-White-Photography-DesignsMag-011.jpg
-    ```
+```console
+$ ml color colorize --interactive
+Path or URL of images to colorize (Quit by Ctrl-d):
+(You could try images in '~/.mlhub/colorize/images/')
+> https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper2.jpg
+https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper2.jpg,black-and-white-flowers-wallpaper2_color.jpg
+> https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper5-1.jpg
+https://flower-wallpaper.org/wp-content/uploads/2016/10/black-and-white-flowers-wallpaper5-1.jpg,black-and-white-flowers-wallpaper5-1_color.jpg
+> https://www.designsmag.com/wp-content/uploads/2017/06/Black-White-Photography-DesignsMag-011.jpg
+https://www.designsmag.com/wp-content/uploads/2017/06/Black-White-Photography-DesignsMag-011.jpg,Black-White-Photography-DesignsMag-011_color.jpg
+```
 
 ## Demonstration
 
