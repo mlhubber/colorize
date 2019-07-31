@@ -160,7 +160,7 @@ Colorize image_10_bw.png
 
 To colorize images given by a path or URL:
 
-  $ ml apply colorize
+  $ ml color colorize <path>
 
 ```
 
