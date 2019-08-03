@@ -1,11 +1,11 @@
 # Simple Colorization
 
 This [MLHub](https://mlhub.ai) package supports a pre-built model from
-[Yang Liu]() providing a very simple example of photo colorization
-using deep neural networks. For the demonstration a sample of provided
-black and white photos are colorized and displayed. You can add colour
-to your own local photos, a folder of photos, a photo on the Internet
-using the *color* command line tool.
+[Yang Liu](https://github.com/foamliu) providing an example of photo
+colorization using deep neural networks. For the demonstration a
+sample of provided black and white photos are colorized and
+displayed. You can add colour to your own local photos, a folder of
+photos, a photo on the Internet using the *color* command line tool.
 
 Visit the github repository for more details:
 https://github.com/mlhubber/colorize
