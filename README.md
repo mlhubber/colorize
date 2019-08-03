@@ -18,7 +18,7 @@ https://github.com/mlhubber/colorize
   $ pip3 install mlhub
   ```
 
-* To install and configure the pre-built model:
+* To install and configure the package:
 
   ```console
   $ ml install   colorize
@@ -27,11 +27,11 @@ https://github.com/mlhubber/colorize
 
 ## Command Line Tools
 
-An demonstration of the package is presented below using the *demo*
+A demonstration of the package is presented below using the *demo*
 command. The package also provides a number of useful command line
-tools.
+tools which we introduce here.
 
-*Colorize Photos*
+**Colorize Photos**
 
 The *color* command will colorize a photo and optionally
 (*--interactive*) display the original and the colorized versions.
