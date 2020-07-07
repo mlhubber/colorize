@@ -1,3 +1,11 @@
+
+# Keep tensorflow quiet!
+
+import os
+import tensorflow as tf
+tf.get_logger().setLevel('ERROR')
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
+
 import cv2 as cv
 import numpy as np
 from keras.models import load_model

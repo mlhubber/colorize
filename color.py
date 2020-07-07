@@ -11,15 +11,9 @@
 # Based on example from Yang Liu
 # https://github.com/
 
-# Keep tensorflow quiet!
-
-import os
-import tensorflow as tf
-tf.get_logger().setLevel('ERROR')
-os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'
-
 # Required libraries.
 
+import os
 import re
 import sys
 import glob
