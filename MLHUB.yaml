@@ -15,12 +15,11 @@ dependencies:
     - numpy # pip install tensorflow overrides this unfortunately
     - pydot
     - matplotlib
-    - keras    # python3-keras not available Ubuntu 16.04
     - opencv   # python3-opencv not available Ubuntu 16.04
     - graphviz # python3-graphviz not available Ubuntu 16.04
   pip3:
     - tensorflow
-    - numpy==1.13.3 # tensorflow pip installs 1.16 and fails to run
+    - keras # Ubuntu 20.04 has 2.2.4 leading to errors. Works with 2.4.3.
   files:
     - https://github.com/foamliu/Simple-Colorization/releases/download/v1.0/model.06-2.5489.hdf5: cache/models/
     - data
