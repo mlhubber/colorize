@@ -1,8 +1,8 @@
 --- # SIMPLE COLOURIZER
 meta:
   name         : colorize
-  version      : 1.5.5
-  keywords     : python, graphics, colorize
+  version      : 1.5.6
+  keywords     : python, graphics, colorize, tensorflow, keras, computer vision
   languages    : py
   license      : gpl3
   title        : Demonstrate the concept of photo colorization.
@@ -11,13 +11,13 @@ meta:
   url          : https://github.com/mlhubber/colorize
   filename     : pool/main/c/colorize/colorize_1.2.2.mlm
 dependencies:
-  python3: # Operating system installed packages
-    - numpy # pip install tensorflow overrides this unfortunately
+  python3: # Operating system installed packages.
+    - numpy
     - pydot
     - matplotlib
     - opencv   # python3-opencv not available Ubuntu 16.04
     - graphviz # python3-graphviz not available Ubuntu 16.04
-  pip3:
+  pip3: # Local user pip3 installed packages.
     - tensorflow
     - keras>=2.4.3 # Ubuntu 20.04 has 2.2.4 leading to errors. Works with 2.4.3.
   files:
