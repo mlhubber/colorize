@@ -17,6 +17,7 @@ dependencies:
     - matplotlib
     - opencv   # python3-opencv not available Ubuntu 16.04
     - graphviz # python3-graphviz not available Ubuntu 16.04
+    - toolz
   pip3: # Local user pip3 installed packages.
     - tensorflow
     - keras>=2.4.3 # Ubuntu 20.04 has 2.2.4 leading to errors. Works with 2.4.3.
