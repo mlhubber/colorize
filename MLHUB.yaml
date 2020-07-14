@@ -1,7 +1,7 @@
 --- # SIMPLE COLOURIZER
 meta:
   name         : colorize
-  version      : 1.5.6
+  version      : 1.5.7
   keywords     : python, graphics, colorize, tensorflow, keras, computer vision
   languages    : py
   license      : gpl3
