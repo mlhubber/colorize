@@ -19,7 +19,7 @@ dependencies:
     - graphviz # python3-graphviz not available Ubuntu 16.04
     - toolz
   pip3: # Local user pip3 installed packages.
-    - tensorflow
+    - tensorflow-cpu
     - keras>=2.4.3 # Ubuntu 20.04 has 2.2.4 leading to errors. Works with 2.4.3.
   files:
     - https://github.com/foamliu/Simple-Colorization/releases/download/v1.0/model.06-2.5489.hdf5: cache/models/
