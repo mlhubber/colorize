@@ -27,7 +27,7 @@ import cv2 as cv
 import numpy as np
 
 from utils import get_predict_api, plot_bw_color_comparison
-from mlhub.utils import get_cmd_cwd
+from mlhub.pkg import get_cmd_cwd
 from mlhub.pkg import is_url
 
 # ----------------------------------------------------------------------
